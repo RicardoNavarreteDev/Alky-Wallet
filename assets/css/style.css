@@ -6,6 +6,140 @@ body {
         linear-gradient(180deg, #f4f7fc 0%, #eef3f9 100%);
 }
 
+body[data-page="home"] {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(25, 135, 84, 0.18), transparent 30%),
+        radial-gradient(circle at 80% 15%, rgba(13, 110, 253, 0.16), transparent 28%),
+        linear-gradient(180deg, #eef4ff 0%, #f8fbff 48%, #eef3f9 100%);
+}
+
+body[data-page="home"] .hero-shell {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 48px 0 32px;
+}
+
+body[data-page="home"] .hero-card {
+    position: relative;
+    overflow: hidden;
+    border: 0;
+    border-radius: 1.5rem;
+    background:
+        linear-gradient(135deg, rgba(13, 110, 253, 0.96), rgba(25, 135, 84, 0.94));
+    color: #fff;
+    box-shadow: 0 1.5rem 3rem rgba(13, 110, 253, 0.18);
+}
+
+body[data-page="home"] .hero-card::before,
+body[data-page="home"] .hero-card::after {
+    content: "";
+    position: absolute;
+    border-radius: 999px;
+    pointer-events: none;
+}
+
+body[data-page="home"] .hero-card::before {
+    width: 260px;
+    height: 260px;
+    top: -90px;
+    right: -70px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+body[data-page="home"] .hero-card::after {
+    width: 180px;
+    height: 180px;
+    bottom: -70px;
+    left: -40px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+body[data-page="home"] .hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+body[data-page="home"] .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    font-size: 0.875rem;
+    backdrop-filter: blur(8px);
+}
+
+body[data-page="home"] .hero-title {
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    margin: 0.75rem 0 1rem;
+}
+
+body[data-page="home"] .hero-copy {
+    max-width: 34rem;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1.05rem;
+}
+
+body[data-page="home"] .hero-actions .btn {
+    min-width: 180px;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+}
+
+body[data-page="home"] .feature-card {
+    height: 100%;
+    border: 0;
+    border-radius: 1.25rem;
+    box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.08);
+}
+
+body[data-page="home"] .feature-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf2ff;
+    color: #0d6efd;
+    font-size: 1.15rem;
+}
+
+body[data-page="home"] .hero-preview {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 1.25rem;
+    backdrop-filter: blur(10px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+body[data-page="home"] .hero-preview .mini-label {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.875rem;
+}
+
+body[data-page="home"] .hero-preview .mini-amount {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+body[data-page="home"] .hero-preview .mini-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    font-size: 0.875rem;
+}
+
 /* Authentication */
 .auth-card {
     max-width: 400px;
