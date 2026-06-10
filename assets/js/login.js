@@ -23,7 +23,7 @@
                 app.showBootstrapAlert('#alert-container', 'success', 'Inicio de sesión exitoso', 'Redirigiendo al menú principal.');
 
                 window.setTimeout(function () {
-                    window.location.href = 'menu.html';
+                    window.location.href = './menu.html';
                 }, 1400);
                 return;
             }

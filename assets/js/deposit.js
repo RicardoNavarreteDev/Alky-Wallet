@@ -32,7 +32,7 @@
             app.showBootstrapAlert('#alert-container', 'success', 'Depósito realizado', `Nuevo saldo: ${app.formatCurrency(newBalance)}.`);
 
             window.setTimeout(function () {
-                window.location.href = 'menu.html';
+                window.location.href = './menu.html';
             }, 2000);
         });
     }

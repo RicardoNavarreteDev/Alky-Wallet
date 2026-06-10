@@ -6,7 +6,7 @@
         const $ = window.jQuery;
 
         if (sessionStorage.getItem('m2_logged_in') !== 'true') {
-            window.location.href = 'login.html';
+            window.location.href = './login.html';
             return;
         }
 
@@ -26,14 +26,14 @@
             $logoutBtn.on('click', function () {
                 sessionStorage.removeItem('m2_logged_in');
                 sessionStorage.removeItem('m2_user_email');
-                window.location.href = 'login.html';
+                window.location.href = './login.html';
             });
         }
 
         const navigationMap = [
-            ['menuDepositBtn', 'deposit.html', 'depósito'],
-            ['menuSendBtn', 'sendmoney.html', 'enviar dinero'],
-            ['menuTransactionsBtn', 'transactions.html', 'últimos movimientos']
+            ['menuDepositBtn', './deposit.html', 'depósito'],
+            ['menuSendBtn', './sendmoney.html', 'enviar dinero'],
+            ['menuTransactionsBtn', './transactions.html', 'últimos movimientos']
         ];
 
         navigationMap.forEach(function ([buttonId, target, label]) {
