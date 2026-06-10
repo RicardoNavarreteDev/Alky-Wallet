@@ -10,12 +10,15 @@
         const $selectedContactBox = $('#selectedContactBox');
         const $sendMoneyBtn = $('#sendMoneyBtn');
         const $toggleContactFormBtn = $('#toggleContactFormBtn');
-        const $newContactSection = $('#newContactSection');
         const $contactForm = $('#contactForm');
         const $cancelContactBtn = $('#cancelContactBtn');
         const $cancelContactFormBtn = $('#cancelContactFormBtn');
         const $saveContactBtn = $('#saveContactBtn');
         const $sendConfirmationContainer = $('#sendConfirmationContainer');
+        const contactModalElement = document.getElementById('newContactModal');
+        const contactModal = contactModalElement && window.bootstrap
+            ? window.bootstrap.Modal.getOrCreateInstance(contactModalElement)
+            : null;
 
         if (!$sendForm.length) {
             return;
@@ -112,16 +115,32 @@
 
         function closeContactForm() {
             $contactForm.trigger('reset');
-            $newContactSection.addClass('d-none');
+            if (contactModal) {
+                contactModal.hide();
+            }
         }
 
         function openContactForm() {
-            $newContactSection.removeClass('d-none');
+            if (contactModal) {
+                contactModal.show();
+                return;
+            }
+
             $('#contactName').trigger('focus');
         }
 
         renderContacts();
         refreshSelection();
+
+        if (contactModalElement) {
+            contactModalElement.addEventListener('shown.bs.modal', function () {
+                $('#contactName').trigger('focus');
+            });
+
+            contactModalElement.addEventListener('hidden.bs.modal', function () {
+                $contactForm.trigger('reset');
+            });
+        }
 
         $contactSearch.on('input', function () {
             currentSearch = $contactSearch.val();
@@ -142,12 +161,7 @@
         });
 
         $toggleContactFormBtn.on('click', function () {
-            if ($newContactSection.hasClass('d-none')) {
-                openContactForm();
-                return;
-            }
-
-            closeContactForm();
+            openContactForm();
         });
 
         $cancelContactBtn.on('click', closeContactForm);

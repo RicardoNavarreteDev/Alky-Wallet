@@ -74,73 +74,6 @@
 
             </form>
 
-            <div id="newContactSection" class="card border mt-3 d-none">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h5 class="mb-0">
-                            <i class="fa-solid fa-address-book me-2"></i>
-                            Nuevo Contacto
-                        </h5>
-
-                        <button type="button" class="btn-close" id="cancelContactBtn" aria-label="Cancelar"></button>
-                    </div>
-
-                    <form id="contactForm" novalidate>
-                        <div class="mb-3">
-                            <label class="form-label" for="contactName">Nombre y apellido</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="contactName"
-                                placeholder="Nombre y apellido"
-                                required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label" for="contactCbu">Número de CBU</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="contactCbu"
-                                placeholder="22 dígitos"
-                                maxlength="22"
-                                required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label" for="contactAlias">Alias</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="contactAlias"
-                                placeholder="Alias"
-                                required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label" for="contactBank">Nombre del Banco</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="contactBank"
-                                placeholder="Banco"
-                                required>
-                        </div>
-
-                        <div class="d-flex gap-2 flex-wrap">
-                            <button class="btn btn-success" id="saveContactBtn" type="button">
-                                <i class="fa-solid fa-floppy-disk me-2"></i>
-                                Guardar contacto
-                            </button>
-
-                            <button class="btn btn-outline-secondary" type="button" id="cancelContactFormBtn">
-                                Cancelar
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
             <div id="sendConfirmationContainer" class="mt-4"></div>
 
             <a href="./menu.html" class="btn btn-outline-secondary w-100 mt-3">
@@ -152,6 +85,74 @@
 
     </div>
 
+</div>
+
+<div class="modal fade" id="newContactModal" tabindex="-1" aria-labelledby="newContactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newContactModalLabel">
+                    <i class="fa-solid fa-address-book me-2"></i>
+                    Nuevo Contacto
+                </h5>
+                <button type="button" class="btn-close" id="cancelContactBtn" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <form id="contactForm" novalidate>
+                    <div class="mb-3">
+                        <label class="form-label" for="contactName">Nombre y apellido</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="contactName"
+                            placeholder="Nombre y apellido"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="contactCbu">Número de CBU</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="contactCbu"
+                            placeholder="22 dígitos"
+                            maxlength="22"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="contactAlias">Alias</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="contactAlias"
+                            placeholder="Alias"
+                            required>
+                    </div>
+
+                    <div class="mb-0">
+                        <label class="form-label" for="contactBank">Nombre del Banco</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="contactBank"
+                            placeholder="Banco"
+                            required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer d-flex gap-2 flex-wrap justify-content-end">
+                <button class="btn btn-success" id="saveContactBtn" type="button">
+                    <i class="fa-solid fa-floppy-disk me-2"></i>
+                    Guardar contacto
+                </button>
+
+                <button class="btn btn-outline-secondary" type="button" id="cancelContactFormBtn">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
