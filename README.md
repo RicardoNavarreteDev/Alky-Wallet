@@ -22,7 +22,8 @@ ALKY WALLET es una billetera digital básica desarrollada como proyecto educativ
 - Persistencia de datos usando Local Storage.
 
 ## Contacto y autor del proyecto
-- Autor: Navar
-- Contacto: navar@example.com
+- Autor: Ricardo Navarrete
+- Contacto: ricardo.navarrete.soto@gmail.com
+- Github : https://github.com/RicardoNavarreteDev/Alky-Wallet
 
 > Puedes reemplazar el autor y el contacto por tus datos reales si lo necesitas para la entrega.
